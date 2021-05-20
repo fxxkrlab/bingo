@@ -24,6 +24,7 @@ INLINE_TV_STR = """
 """
 
 INLINE_FORMAT_NOTICE = """
+<pre>• InlineQuery •</pre>
 <b>命令格式提示</b>
 <b>请按照以下格式查询</b>
 ------------------------------
