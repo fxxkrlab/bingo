@@ -23,8 +23,8 @@ INLINE_TV_STR = """
 • <b>简介 :</b> {}
 """
 
-INLINE_ERR_NOTICE = """
-<b>格式错误</b>
+INLINE_FORMAT_NOTICE = """
+<b>命令格式提示</b>
 <b>请按照以下格式查询</b>
 ------------------------------
 <pre>movie 电影名 y:年份(可选参数)</pre>

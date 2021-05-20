@@ -91,14 +91,14 @@ def inlinequery(update, context):
                         )
                     )
         else:
-            return inlineERR(update, medialist)
+            return inlineHELP(update, medialist)
 
     update.inline_query.answer(medialist[:50], cache_time=10)
 
 
-def inlineERR(update, medialist):
+def inlineHELP(update, medialist):
     medialist.append(article(
-            title="#格式错误",
+            title="• <b>InlineQuery</b>命令格式提示",
             description="movie|tv name y:year(optional)\n请根据范例查询或发送本消息获取更多规则",
-            message_text=st.INLINE_ERR_NOTICE,))
+            message_text=st.INLINE_FORMAT_NOTICE,))
     update.inline_query.answer(medialist[:50])
