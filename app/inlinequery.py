@@ -55,7 +55,6 @@ def inlinequery(update, context):
                     )
         elif query.startswith("tv"):
             query = query.replace("tv", "").strip()
-            print(query)
             
             match_year = re.search(load.title_year_regex, query, flags=re.I)
             match_title = re.search(load.title_regex, query, flags=re.I)
