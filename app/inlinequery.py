@@ -98,7 +98,7 @@ def inlinequery(update, context):
 
 def inlineHELP(update, medialist):
     medialist.append(article(
-            title="• <b>InlineQuery</b>命令格式提示",
+            title="• InlineQuery •命令格式提示",
             description="movie|tv name y:year(optional)\n请根据范例查询或发送本消息获取更多规则",
             message_text=st.INLINE_FORMAT_NOTICE,))
     update.inline_query.answer(medialist[:50])
