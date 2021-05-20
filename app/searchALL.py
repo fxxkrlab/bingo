@@ -5,7 +5,7 @@ from app.modules import load, tmdb
 
 # ### search workflow
 def searchALL(update, context):
-    entry_cmd = context.message.text
+    entry_cmd = update.message.text
     entry_context = entry_cmd[7:].strip()
     mediainfo = {}
     media_list = []
