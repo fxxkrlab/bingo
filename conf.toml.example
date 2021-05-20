@@ -1,0 +1,17 @@
+[Servers]
+
+    [Servers.Mod]
+
+        mod = "long" # long or webhook(future)
+
+    [Servers.server]
+        # SERVER
+        CONSOLE = "1" # console log level DEBUG = DEBUG
+
+    [Servers.BOT]
+        # Telegram BOT API
+        API_TOKEN = "API TOKEN"
+        
+[extension]
+    [extension.tmdb]
+        API_TOKEN = 'API TOKEN'
