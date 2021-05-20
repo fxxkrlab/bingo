@@ -8,10 +8,10 @@ from app.modules.inlinearticle import article
 
 pic_url = "https://image.tmdb.org/t/p"
 
-def inlinequery(context, bot):
+def inlinequery(update, context):
     query = ""
     year = ""
-    query = context.inline_query.query
+    query = update.inline_query.query
     mediainfo = {}
     medialist = []
     results = []
@@ -92,14 +92,14 @@ def inlinequery(context, bot):
                         )
                     )
         else:
-            return inlineERR(context, medialist)
+            return inlineERR(update, medialist)
 
-    context.inline_query.answer(medialist[:50], cache_time=10)
+    update.inline_query.answer(medialist[:50], cache_time=10)
 
 
-def inlineERR(context, medialist):
+def inlineERR(update, medialist):
     medialist.append(article(
             title="#格式错误",
             description="movie|tv name y:year(optional)\n请根据范例查询或发送本消息获取更多规则",
             message_text=st.INLINE_ERR_NOTICE,))
-    context.inline_query.answer(medialist[:50])
+    update.inline_query.answer(medialist[:50])

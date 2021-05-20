@@ -1,2 +1,2 @@
 def _help(update, context):
-    context.message.reply_text("111")
+    context.message.reply_text("hello")
